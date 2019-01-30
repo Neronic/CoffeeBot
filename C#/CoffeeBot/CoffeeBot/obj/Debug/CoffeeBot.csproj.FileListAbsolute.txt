@@ -7,3 +7,4 @@ C:\Users\Neronic\Documents\GitHub\CoffeeBot\C#\CoffeeBot\CoffeeBot\obj\Debug\Cof
 C:\Users\Neronic\Documents\GitHub\CoffeeBot\C#\CoffeeBot\CoffeeBot\obj\Debug\CoffeeBot.csproj.CoreCompileInputs.cache
 C:\Users\Neronic\Documents\GitHub\CoffeeBot\C#\CoffeeBot\CoffeeBot\obj\Debug\CoffeeBot.exe
 C:\Users\Neronic\Documents\GitHub\CoffeeBot\C#\CoffeeBot\CoffeeBot\obj\Debug\CoffeeBot.pdb
+C:\Users\Neronic\Documents\GitHub\CoffeeBot\C#\CoffeeBot\CoffeeBot\obj\Debug\CoffeeBot.csprojAssemblyReference.cache

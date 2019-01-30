@@ -35,16 +35,34 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.panelBotSelection = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lblbotGameSelect = new System.Windows.Forms.Label();
+            this.ddlbotGameSelect = new System.Windows.Forms.ComboBox();
             this.btnStart = new System.Windows.Forms.Button();
             this.lblSceneTitle = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.panelAccount = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnAddAccount = new System.Windows.Forms.Button();
             this.btnManage = new System.Windows.Forms.Button();
+            this.btnAddAccount = new System.Windows.Forms.Button();
+            this.btnAccountsBack = new System.Windows.Forms.Button();
+            this.lblaccAccountName = new System.Windows.Forms.Label();
+            this.ddlaccAccountSelect = new System.Windows.Forms.ComboBox();
+            this.lblaccGameSelect = new System.Windows.Forms.Label();
+            this.ddlaccGameSelect = new System.Windows.Forms.ComboBox();
+            this.lblaccNewAccount = new System.Windows.Forms.Label();
+            this.txtAccountName = new System.Windows.Forms.TextBox();
+            this.lblaccPassword = new System.Windows.Forms.Label();
+            this.txtaccPassword = new System.Windows.Forms.TextBox();
+            this.btnSubmit = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.lblaccNewPass = new System.Windows.Forms.Label();
+            this.lblaccConfirmPass = new System.Windows.Forms.Label();
+            this.txtaccNewPass = new System.Windows.Forms.TextBox();
+            this.txtaccConfirmPass = new System.Windows.Forms.TextBox();
+            this.lblbotAccountSelect = new System.Windows.Forms.Label();
+            this.ddlbotAccountSelect = new System.Windows.Forms.ComboBox();
+            this.lblbotRunFunction = new System.Windows.Forms.Label();
+            this.checkboxCont = new System.Windows.Forms.CheckBox();
+            this.checkboxRotate = new System.Windows.Forms.CheckBox();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -54,10 +72,10 @@
             // 
             // panelMenu
             // 
+            this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Controls.Add(this.btnSettings);
             this.panelMenu.Controls.Add(this.btnAccounts);
             this.panelMenu.Controls.Add(this.btnBot);
-            this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
@@ -129,35 +147,40 @@
             // 
             // panelBotSelection
             // 
-            this.panelBotSelection.Controls.Add(this.button2);
-            this.panelBotSelection.Controls.Add(this.button1);
-            this.panelBotSelection.Controls.Add(this.label1);
-            this.panelBotSelection.Controls.Add(this.comboBox1);
+            this.panelBotSelection.Controls.Add(this.checkboxRotate);
+            this.panelBotSelection.Controls.Add(this.checkboxCont);
+            this.panelBotSelection.Controls.Add(this.lblbotRunFunction);
+            this.panelBotSelection.Controls.Add(this.ddlbotAccountSelect);
+            this.panelBotSelection.Controls.Add(this.lblbotAccountSelect);
+            this.panelBotSelection.Controls.Add(this.lblbotGameSelect);
+            this.panelBotSelection.Controls.Add(this.ddlbotGameSelect);
             this.panelBotSelection.Controls.Add(this.btnStart);
-            this.panelBotSelection.Location = new System.Drawing.Point(190, 75);
+            this.panelBotSelection.Location = new System.Drawing.Point(183, 47);
             this.panelBotSelection.Name = "panelBotSelection";
             this.panelBotSelection.Size = new System.Drawing.Size(830, 570);
             this.panelBotSelection.TabIndex = 1;
             // 
-            // label1
+            // lblbotGameSelect
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(71, 147);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 21);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "label1";
+            this.lblbotGameSelect.AutoSize = true;
+            this.lblbotGameSelect.Location = new System.Drawing.Point(260, 154);
+            this.lblbotGameSelect.Name = "lblbotGameSelect";
+            this.lblbotGameSelect.Size = new System.Drawing.Size(60, 21);
+            this.lblbotGameSelect.TabIndex = 6;
+            this.lblbotGameSelect.Text = "Game";
             // 
-            // comboBox1
+            // ddlbotGameSelect
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(227, 124);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 29);
-            this.comboBox1.TabIndex = 5;
+            this.ddlbotGameSelect.FormattingEnabled = true;
+            this.ddlbotGameSelect.Location = new System.Drawing.Point(424, 152);
+            this.ddlbotGameSelect.Name = "ddlbotGameSelect";
+            this.ddlbotGameSelect.Size = new System.Drawing.Size(207, 29);
+            this.ddlbotGameSelect.TabIndex = 5;
+            this.ddlbotGameSelect.Text = "Select Game...";
             // 
             // btnStart
             // 
+            this.btnStart.Enabled = false;
             this.btnStart.FlatAppearance.BorderSize = 0;
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStart.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -194,30 +217,39 @@
             // 
             // panelAccount
             // 
+            this.panelAccount.Controls.Add(this.txtaccConfirmPass);
+            this.panelAccount.Controls.Add(this.txtaccNewPass);
+            this.panelAccount.Controls.Add(this.lblaccConfirmPass);
+            this.panelAccount.Controls.Add(this.lblaccNewPass);
+            this.panelAccount.Controls.Add(this.btnClear);
+            this.panelAccount.Controls.Add(this.btnSubmit);
+            this.panelAccount.Controls.Add(this.txtaccPassword);
+            this.panelAccount.Controls.Add(this.lblaccPassword);
+            this.panelAccount.Controls.Add(this.txtAccountName);
+            this.panelAccount.Controls.Add(this.lblaccNewAccount);
+            this.panelAccount.Controls.Add(this.ddlaccGameSelect);
+            this.panelAccount.Controls.Add(this.lblaccGameSelect);
+            this.panelAccount.Controls.Add(this.ddlaccAccountSelect);
+            this.panelAccount.Controls.Add(this.lblaccAccountName);
+            this.panelAccount.Controls.Add(this.btnAccountsBack);
             this.panelAccount.Controls.Add(this.btnManage);
             this.panelAccount.Controls.Add(this.btnAddAccount);
             this.panelAccount.Location = new System.Drawing.Point(180, 47);
             this.panelAccount.Name = "panelAccount";
             this.panelAccount.Size = new System.Drawing.Size(830, 570);
             this.panelAccount.TabIndex = 4;
+            this.panelAccount.Visible = false;
             // 
-            // button1
+            // btnManage
             // 
-            this.button1.Location = new System.Drawing.Point(53, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(178, 37);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnManage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManage.Location = new System.Drawing.Point(166, 21);
+            this.btnManage.Name = "btnManage";
+            this.btnManage.Size = new System.Drawing.Size(97, 43);
+            this.btnManage.TabIndex = 1;
+            this.btnManage.Text = "Manage";
+            this.btnManage.UseVisualStyleBackColor = true;
+            this.btnManage.Click += new System.EventHandler(this.btnManage_Click);
             // 
             // btnAddAccount
             // 
@@ -230,26 +262,216 @@
             this.btnAddAccount.UseVisualStyleBackColor = true;
             this.btnAddAccount.Click += new System.EventHandler(this.btnAddAccount_Click);
             // 
-            // btnManage
+            // btnAccountsBack
             // 
-            this.btnManage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManage.Location = new System.Drawing.Point(166, 21);
-            this.btnManage.Name = "btnManage";
-            this.btnManage.Size = new System.Drawing.Size(97, 43);
-            this.btnManage.TabIndex = 1;
-            this.btnManage.Text = "Manage";
-            this.btnManage.UseVisualStyleBackColor = true;
+            this.btnAccountsBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccountsBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.btnAccountsBack.Location = new System.Drawing.Point(721, 21);
+            this.btnAccountsBack.Name = "btnAccountsBack";
+            this.btnAccountsBack.Size = new System.Drawing.Size(97, 43);
+            this.btnAccountsBack.TabIndex = 2;
+            this.btnAccountsBack.Text = "Back";
+            this.btnAccountsBack.UseVisualStyleBackColor = true;
+            this.btnAccountsBack.Visible = false;
+            this.btnAccountsBack.Click += new System.EventHandler(this.btnAccountsBack_Click);
+            // 
+            // lblaccAccountName
+            // 
+            this.lblaccAccountName.AutoSize = true;
+            this.lblaccAccountName.Location = new System.Drawing.Point(37, 224);
+            this.lblaccAccountName.Name = "lblaccAccountName";
+            this.lblaccAccountName.Size = new System.Drawing.Size(80, 21);
+            this.lblaccAccountName.TabIndex = 3;
+            this.lblaccAccountName.Text = "Account";
+            this.lblaccAccountName.Visible = false;
+            // 
+            // ddlaccAccountSelect
+            // 
+            this.ddlaccAccountSelect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.ddlaccAccountSelect.FormattingEnabled = true;
+            this.ddlaccAccountSelect.Location = new System.Drawing.Point(162, 216);
+            this.ddlaccAccountSelect.Name = "ddlaccAccountSelect";
+            this.ddlaccAccountSelect.Size = new System.Drawing.Size(121, 29);
+            this.ddlaccAccountSelect.TabIndex = 4;
+            this.ddlaccAccountSelect.Visible = false;
+            // 
+            // lblaccGameSelect
+            // 
+            this.lblaccGameSelect.AutoSize = true;
+            this.lblaccGameSelect.Location = new System.Drawing.Point(37, 149);
+            this.lblaccGameSelect.Name = "lblaccGameSelect";
+            this.lblaccGameSelect.Size = new System.Drawing.Size(60, 21);
+            this.lblaccGameSelect.TabIndex = 5;
+            this.lblaccGameSelect.Text = "Game";
+            this.lblaccGameSelect.Visible = false;
+            // 
+            // ddlaccGameSelect
+            // 
+            this.ddlaccGameSelect.FormattingEnabled = true;
+            this.ddlaccGameSelect.Location = new System.Drawing.Point(162, 148);
+            this.ddlaccGameSelect.Name = "ddlaccGameSelect";
+            this.ddlaccGameSelect.Size = new System.Drawing.Size(121, 29);
+            this.ddlaccGameSelect.TabIndex = 6;
+            this.ddlaccGameSelect.Visible = false;
+            // 
+            // lblaccNewAccount
+            // 
+            this.lblaccNewAccount.AutoSize = true;
+            this.lblaccNewAccount.Location = new System.Drawing.Point(37, 224);
+            this.lblaccNewAccount.Name = "lblaccNewAccount";
+            this.lblaccNewAccount.Size = new System.Drawing.Size(132, 21);
+            this.lblaccNewAccount.TabIndex = 7;
+            this.lblaccNewAccount.Text = "Account Name";
+            this.lblaccNewAccount.Visible = false;
+            // 
+            // txtAccountName
+            // 
+            this.txtAccountName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.txtAccountName.Location = new System.Drawing.Point(183, 218);
+            this.txtAccountName.Name = "txtAccountName";
+            this.txtAccountName.Size = new System.Drawing.Size(100, 27);
+            this.txtAccountName.TabIndex = 8;
+            this.txtAccountName.Visible = false;
+            // 
+            // lblaccPassword
+            // 
+            this.lblaccPassword.AutoSize = true;
+            this.lblaccPassword.Location = new System.Drawing.Point(41, 284);
+            this.lblaccPassword.Name = "lblaccPassword";
+            this.lblaccPassword.Size = new System.Drawing.Size(82, 21);
+            this.lblaccPassword.TabIndex = 9;
+            this.lblaccPassword.Text = "Password";
+            this.lblaccPassword.Visible = false;
+            // 
+            // txtaccPassword
+            // 
+            this.txtaccPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.txtaccPassword.Location = new System.Drawing.Point(182, 284);
+            this.txtaccPassword.Name = "txtaccPassword";
+            this.txtaccPassword.Size = new System.Drawing.Size(100, 27);
+            this.txtaccPassword.TabIndex = 10;
+            this.txtaccPassword.Visible = false;
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubmit.Location = new System.Drawing.Point(41, 400);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(97, 43);
+            this.btnSubmit.TabIndex = 11;
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Visible = false;
+            // 
+            // btnClear
+            // 
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Location = new System.Drawing.Point(166, 400);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(97, 43);
+            this.btnClear.TabIndex = 12;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Visible = false;
+            // 
+            // lblaccNewPass
+            // 
+            this.lblaccNewPass.AutoSize = true;
+            this.lblaccNewPass.Location = new System.Drawing.Point(37, 284);
+            this.lblaccNewPass.Name = "lblaccNewPass";
+            this.lblaccNewPass.Size = new System.Drawing.Size(122, 21);
+            this.lblaccNewPass.TabIndex = 13;
+            this.lblaccNewPass.Text = "New Password";
+            this.lblaccNewPass.Visible = false;
+            // 
+            // lblaccConfirmPass
+            // 
+            this.lblaccConfirmPass.AutoSize = true;
+            this.lblaccConfirmPass.Location = new System.Drawing.Point(37, 345);
+            this.lblaccConfirmPass.Name = "lblaccConfirmPass";
+            this.lblaccConfirmPass.Size = new System.Drawing.Size(147, 21);
+            this.lblaccConfirmPass.TabIndex = 14;
+            this.lblaccConfirmPass.Text = "Confirm Password";
+            this.lblaccConfirmPass.Visible = false;
+            // 
+            // txtaccNewPass
+            // 
+            this.txtaccNewPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.txtaccNewPass.Location = new System.Drawing.Point(183, 284);
+            this.txtaccNewPass.Name = "txtaccNewPass";
+            this.txtaccNewPass.Size = new System.Drawing.Size(100, 27);
+            this.txtaccNewPass.TabIndex = 15;
+            this.txtaccNewPass.Visible = false;
+            // 
+            // txtaccConfirmPass
+            // 
+            this.txtaccConfirmPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.txtaccConfirmPass.Location = new System.Drawing.Point(182, 339);
+            this.txtaccConfirmPass.Name = "txtaccConfirmPass";
+            this.txtaccConfirmPass.Size = new System.Drawing.Size(100, 27);
+            this.txtaccConfirmPass.TabIndex = 16;
+            this.txtaccConfirmPass.Visible = false;
+            // 
+            // lblbotAccountSelect
+            // 
+            this.lblbotAccountSelect.AutoSize = true;
+            this.lblbotAccountSelect.Location = new System.Drawing.Point(260, 251);
+            this.lblbotAccountSelect.Name = "lblbotAccountSelect";
+            this.lblbotAccountSelect.Size = new System.Drawing.Size(80, 21);
+            this.lblbotAccountSelect.TabIndex = 9;
+            this.lblbotAccountSelect.Text = "Account";
+            this.lblbotAccountSelect.Visible = false;
+            // 
+            // ddlbotAccountSelect
+            // 
+            this.ddlbotAccountSelect.FormattingEnabled = true;
+            this.ddlbotAccountSelect.Location = new System.Drawing.Point(424, 248);
+            this.ddlbotAccountSelect.Name = "ddlbotAccountSelect";
+            this.ddlbotAccountSelect.Size = new System.Drawing.Size(121, 29);
+            this.ddlbotAccountSelect.TabIndex = 10;
+            this.ddlbotAccountSelect.Visible = false;
+            // 
+            // lblbotRunFunction
+            // 
+            this.lblbotRunFunction.AutoSize = true;
+            this.lblbotRunFunction.Location = new System.Drawing.Point(260, 345);
+            this.lblbotRunFunction.Name = "lblbotRunFunction";
+            this.lblbotRunFunction.Size = new System.Drawing.Size(112, 21);
+            this.lblbotRunFunction.TabIndex = 11;
+            this.lblbotRunFunction.Text = "Run Function";
+            this.lblbotRunFunction.Visible = false;
+            // 
+            // checkboxCont
+            // 
+            this.checkboxCont.AutoSize = true;
+            this.checkboxCont.Location = new System.Drawing.Point(424, 323);
+            this.checkboxCont.Name = "checkboxCont";
+            this.checkboxCont.Size = new System.Drawing.Size(129, 25);
+            this.checkboxCont.TabIndex = 12;
+            this.checkboxCont.Text = "Continuously";
+            this.checkboxCont.UseVisualStyleBackColor = true;
+            this.checkboxCont.Visible = false;
+            // 
+            // checkboxRotate
+            // 
+            this.checkboxRotate.AutoSize = true;
+            this.checkboxRotate.Location = new System.Drawing.Point(424, 360);
+            this.checkboxRotate.Name = "checkboxRotate";
+            this.checkboxRotate.Size = new System.Drawing.Size(73, 25);
+            this.checkboxRotate.TabIndex = 13;
+            this.checkboxRotate.Text = "Cycle";
+            this.checkboxRotate.UseVisualStyleBackColor = true;
+            this.checkboxRotate.Visible = false;
             // 
             // CoffeeBotStartScreen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1010, 617);
+            this.Controls.Add(this.panelMenu);
+            this.Controls.Add(this.panelBotSelection);
             this.Controls.Add(this.panelAccount);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblSceneTitle);
-            this.Controls.Add(this.panelBotSelection);
-            this.Controls.Add(this.panelMenu);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -261,6 +483,7 @@
             this.panelBotSelection.ResumeLayout(false);
             this.panelBotSelection.PerformLayout();
             this.panelAccount.ResumeLayout(false);
+            this.panelAccount.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,13 +501,31 @@
         private System.Windows.Forms.Button btnAccounts;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnStart;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label lblbotGameSelect;
+        private System.Windows.Forms.ComboBox ddlbotGameSelect;
         private System.Windows.Forms.Panel panelAccount;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnManage;
         private System.Windows.Forms.Button btnAddAccount;
+        private System.Windows.Forms.Button btnAccountsBack;
+        private System.Windows.Forms.ComboBox ddlaccGameSelect;
+        private System.Windows.Forms.Label lblaccGameSelect;
+        private System.Windows.Forms.ComboBox ddlaccAccountSelect;
+        private System.Windows.Forms.Label lblaccAccountName;
+        private System.Windows.Forms.TextBox txtAccountName;
+        private System.Windows.Forms.Label lblaccNewAccount;
+        private System.Windows.Forms.Label lblaccPassword;
+        private System.Windows.Forms.TextBox txtaccPassword;
+        private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.TextBox txtaccConfirmPass;
+        private System.Windows.Forms.TextBox txtaccNewPass;
+        private System.Windows.Forms.Label lblaccConfirmPass;
+        private System.Windows.Forms.Label lblaccNewPass;
+        private System.Windows.Forms.Label lblbotAccountSelect;
+        private System.Windows.Forms.CheckBox checkboxRotate;
+        private System.Windows.Forms.CheckBox checkboxCont;
+        private System.Windows.Forms.Label lblbotRunFunction;
+        private System.Windows.Forms.ComboBox ddlbotAccountSelect;
     }
 }
 
