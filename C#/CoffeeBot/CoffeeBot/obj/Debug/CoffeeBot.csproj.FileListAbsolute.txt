@@ -1,0 +1,9 @@
+C:\Users\Neronic\Documents\GitHub\CoffeeBot\C#\CoffeeBot\CoffeeBot\bin\Debug\CoffeeBot.exe.config
+C:\Users\Neronic\Documents\GitHub\CoffeeBot\C#\CoffeeBot\CoffeeBot\bin\Debug\CoffeeBot.exe
+C:\Users\Neronic\Documents\GitHub\CoffeeBot\C#\CoffeeBot\CoffeeBot\bin\Debug\CoffeeBot.pdb
+C:\Users\Neronic\Documents\GitHub\CoffeeBot\C#\CoffeeBot\CoffeeBot\obj\Debug\CoffeeBot.CoffeeBotStartScreen.resources
+C:\Users\Neronic\Documents\GitHub\CoffeeBot\C#\CoffeeBot\CoffeeBot\obj\Debug\CoffeeBot.Properties.Resources.resources
+C:\Users\Neronic\Documents\GitHub\CoffeeBot\C#\CoffeeBot\CoffeeBot\obj\Debug\CoffeeBot.csproj.GenerateResource.cache
+C:\Users\Neronic\Documents\GitHub\CoffeeBot\C#\CoffeeBot\CoffeeBot\obj\Debug\CoffeeBot.csproj.CoreCompileInputs.cache
+C:\Users\Neronic\Documents\GitHub\CoffeeBot\C#\CoffeeBot\CoffeeBot\obj\Debug\CoffeeBot.exe
+C:\Users\Neronic\Documents\GitHub\CoffeeBot\C#\CoffeeBot\CoffeeBot\obj\Debug\CoffeeBot.pdb
